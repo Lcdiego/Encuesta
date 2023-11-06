@@ -1,0 +1,233 @@
+:root {
+  margin: 0;
+  padding: 0;
+  font-size: 16px; /* Tamaño de fuente base para dispositivos móviles */
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, sans-serif; /* Fuente legible en dispositivos móviles */
+}
+
+  
+  body::before, body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  
+  body::before {
+    left: 0;
+    background-image: url('../public/milei.jpg');
+  }
+  
+  body::after {
+    right: 0;
+    background-image: url('../public/massa.jpg');
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  
+  
+  /* Estilos adicionales para el modal */
+span{
+    margin-right: 10px;
+}
+  span, h1, h2{
+    color: #e3d3d3bd
+  }
+  .candidatos{
+   
+        background: #2020d387;
+        color: white;
+        width: 258px;
+        height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 37px;
+    }
+    .candidatos:hover{
+      background-color: #00ffff8a;
+      color: black;
+    }
+    .App{
+       
+            display: flex;
+            height: 80vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        
+    }
+    .nombre{
+        margin-right: 10px;
+    }
+    .votos{
+        margin-right: 10px;  
+    }
+    .porcentaje{
+        margin-right: 10px;
+    }
+    .milei{
+        margin-right: 217px;
+    }
+    .massa{
+        margin-right: 178px;
+    }
+    .nombre, .milei, .massa, .porcentaje, .votos{
+        font-size: 50px;
+    }
+    p {
+        background-color: #2020d387;
+        border-radius: 29px;
+        width: 95%;
+        padding-left: 48px;
+    }
+    .css-1wnsr1i{
+        background-color: #15277dfa !important;
+        border-radius: 30px;
+        border: none !important;
+        width: 435px !important;
+    }
+    .css-ix1f03-MuiTypography-root {
+        background-color:#15277dc2;
+    }
+    .votar{
+        
+            margin-top: 30px;
+            background-color: #a776ff5c;
+            color: white;
+            width: 69px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            height: 23px;
+        
+    }
+
+    .votar:hover {
+        background-color:#00ffffc7 ;
+        color: black;
+    }
+    input{
+       cursor: pointer ; 
+       
+    }
+   
+    .resultado{
+      
+        background-color: #15277dc2;
+        width: 20%;
+        border-radius: 10px;
+        padding: 10px 0px 0px 10px;
+        height: 14%;
+    }
+    .nombre-email{
+      display: flex;
+     
+      margin-bottom: 33px;
+  }
+ .correo{
+  margin-left: 22px;
+ }
+input{
+
+    background-color: rgb(73,68,171) ;
+    border: none;
+    border-radius: 10px;
+    padding-left: 5px;
+    color: #cfcfcf;
+}
+
+
+@media (max-width:391px){
+ p{
+  width: 80%;
+  padding-left: 5px;
+
+ } 
+ .milei {
+  margin-right: 152px;
+}
+.massa {
+  margin-right: 152px;
+}
+.resultados{
+  
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+.css-1wnsr1i {
+  background-color: #15277dfa !important;
+  border-radius: 30px;
+  border: none !important;
+  width: 377px !important;
+}
+.resultado{
+  width: 40%;
+}
+.nombre, .milei, .massa, .porcentaje, .votos {
+  font-size: 19px;
+}
+.contenedor-resultados{
+  width: 94%;
+}
+
+}
+
+@media (min-width:391px)and (max-width:1080px){
+  p{
+   width: 80%;
+  } 
+  .milei {
+   margin-right: 178px;
+ }
+ .massa {
+   margin-right: 152px;
+ }
+ .resultados{
+   
+   
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   
+ }
+ .resultado{
+   width: 20%;
+ }
+ .nombre, .milei, .massa, .porcentaje, .votos {
+   font-size: 34px;
+ }
+ .contenedor-resultados{
+   width: 94%;
+ }
+ .votos {
+  margin-right: 30px;
+}
+ 
+ }
+ 
+
+
+
