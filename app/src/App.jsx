@@ -99,7 +99,7 @@ function App() {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Votá Bien!!!
+           <span className='votar-bien'>Votá Bien!!!</span> 
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             <h1>Votación</h1>
