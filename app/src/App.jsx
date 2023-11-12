@@ -21,7 +21,7 @@ function App() {
 
   const obtenerVotosDesdeServidor = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/obtenerVotos');
+      const response = await axios.get('process.env.REACT_APP_BACKEND_URL + /obtenerVotos');
       const votosActualizados = response.data.reduce((acc, voto) => {
         acc[voto.eleccion]++;
         return acc;
