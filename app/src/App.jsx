@@ -21,7 +21,7 @@ function App() {
 
   const obtenerVotosDesdeServidor = async () => {
     try {
-      const response = await axios.get('process.env.REACT_APP_BACKEND_URL + /obtenerVotos');
+      const response = await axios.get('process.env.REACT_APP_BACKEND_URL+/obtenerVotos');
       const votosActualizados = response.data.reduce((acc, voto) => {
         acc[voto.eleccion]++;
         return acc;
@@ -43,7 +43,7 @@ function App() {
   const emitirVoto = async () => {
     if (eleccion && nombre && email) {
       try {
-        await axios.post('http://localhost:3001/registrarVoto', {
+        await axios.post('process.env.REACT_APP_BACKEND_URL+/registrarVoto', {
           nombre: nombre,
           email: email,
           eleccion: eleccion,
