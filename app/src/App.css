@@ -12,6 +12,21 @@ body, html {
   position: relative;
   font-family: Arial, sans-serif; /* Fuente legible en dispositivos móviles */
 }
+.icono-izq{
+  transform: rotate(0deg);
+  color: blue;
+}
+
+.icono-der{
+  
+  transform: rotate(180deg);
+  color: blue;
+
+}
+.css-i4bv87-MuiSvgIcon-root{
+  font-size: 43px !important;
+  
+}
 
   
   body::before, body::after {
@@ -214,7 +229,7 @@ input{
    
  }
  .resultado{
-   width: 20%;
+   width: 43%;
  }
  .nombre, .milei, .massa, .porcentaje, .votos {
    font-size: 34px;
@@ -224,6 +239,15 @@ input{
  }
  .votos {
   margin-right: 30px;
+}
+.nombre, .milei, .massa, .porcentaje, .votos {
+  font-size: 19px;
+}
+input{
+  width: 133px;
+}
+.css-2ulfj5-MuiTypography-root {
+  margin-left: 25px !important;
 }
  
  }

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import TouchAppOutlinedIcon from '@mui/icons-material/TouchAppOutlined';
+import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -80,112 +82,15 @@ function App() {
     boxShadow: 24,
     p: 4,
   };
-  // Crear una función que devuelve una promesa
-function obtenerDatosDeAPI() {
-  return new Promise((resolve, reject) => {
-    // Simulamos una solicitud a una API que toma tiempo
-    setTimeout(() => {
-      const exito = true; // Cambia a false para simular un error
-      if (exito) {
-        resolve({ mensaje: "Datos obtenidos correctamente" });
-      } else {
-        reject("Hubo un error al obtener los datos");
-      }
-    }, 2000); // Simulamos un retraso de 2 segundos
-  });
-}
-
-// Utilizar la promesa
-obtenerDatosDeAPI()
-  .then((resultado) => {
-    console.log(resultado.mensaje);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
-  /*let mongo=[1,3]
-  function sumaNumerosPares(arr) {
-    let total= arr.reduce((total, num) => (num % 2 === 0) ? total + num : total, 0);
-    console.log(total);
-    return total
-  }
- console.log(sumaNumerosPares(mongo)) */
- let mongo = [1, 3];
-
- function sumaNumerosPares(arr) {
-   let total = 0;
- 
-   for (let num of arr) {
-     if (num % 2 === 0) {
-       total = total + num;
-     } else {
-       total = total;
-     }
-   }
- 
-   console.log(total);
-   return total;
- }
- 
- console.log(sumaNumerosPares(mongo));
-
-
-
- let arr=[3,10,11]
- function encontrarNumeroMayor(arr) {
-  return Math.max(...arr);
-}
-console.log(encontrarNumeroMayor(arr));
-
-let palabras = 'pablo';
-
-function esPalindromo(str) {
-  return str === str.split('').reverse().join('');
-}
-
-console.log(esPalindromo(palabras) );
-
-let cadena = 'Este es un ejemplo para contar vocales en una cadena de texto.';
-
-function contarVocales(str) {
-  const vowels = str.match(/[aeiouAEIOU]/g);
-  return vowels ? vowels.length : 0;
-}
-
-console.log(contarVocales(cadena));
-
-
-let n =[10]
-
-function fizzBuzz(n) {
-  for (let i = 1; i <= n; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      console.log("FizzBuzz");
-    } else if (i % 3 === 0) {
-      console.log("Fizz");
-    } else if (i % 5 === 0) {
-      console.log("Buzz");
-    } else {
-      console.log(i);
-    }
-  }
-}
-fizzBuzz(n);
-
-
-let num=[2,3,2,3,4]
-function eliminarDuplicados(arr) {
-  return [...new Set(arr)];
-}
-console.log(eliminarDuplicados(num));
-
+  
+  
 
 
 
   return (
     <div className="App">
       <h1>Diego colman</h1>
-      <Button onClick={handleOpen}><span className='candidatos'>Elije tu candidato</span></Button>
+      <IconButton onClick={handleOpen}><span className='icono-izq'></span><span className='candidatos'>Elije tu candidato</span><span className='icono-der'><ArrowCircleRightOutlinedIcon/></span></IconButton>
       <Modal
         open={open}
         onClose={handleClose}
